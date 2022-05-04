@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+      #center{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+    </style>
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid bg-dark">
+      <h2 class="display-4 text-light text-center">XYZ Cloth Shop</h2>
+    </div>
+    <div class="container" id="main">
+      <div id="center">
+        <div id= "message" class="alert alert-primary" role="alert"></div>
+        <div id="loginform">
+        <form>
+  <div class="form-group">
+    <label for="username">Username: </label>
+    <input type="text" class="form-control" id="username" placeholder="Enter Username">
+  </div>
+  <div class="form-group">
+    <label for="passowrd">Password: </label>
+    <input type="password" class="form-control" id="password" placeholder="Password">
+  </div>
+  <button type="submit" id="login" class="btn btn-success">Login</button>
+  <br><br>
+  <a href="javascript:reset()">Forgot Password ?</a>
+</form>
+</div>
+<div id="forgotpassword">
+  <label for="email">Email address: </label>
+    <input type="email" class="form-control" id="email" placeholder="Enter Email"><br>
+    <button type="submit" id="forgot" class="btn btn-success">Reset Password</button>
+    <br><br>
+    <a href="javascript:resetAgain()">Go To Login Page</a>
+  </div>
+<div id="enterOTP">
+    <input type="hidden" class="form-control" id="emailotp" placeholder="userid" disabled><br>
+    <label for="otp">Enter OTP: </label>
+    <input type="number" class="form-control" id="otp" placeholder="Enter OTP"><br>
+    <label for="newpwd">Enter New Password: </label>
+    <input type="password" class="form-control" id="newpwd" placeholder="Enter New Password"><br>
+    <button type="submit" id="otpbtn" class="btn btn-success">Validate</button>
+    <br><br>
+    <a href="javascript:resetAgain()">Go To Login Page</a>
+</div>
+</div>
+ </div>
+    </div>
+
+    <script src="assets/js/script/auth.js"></script>
+    <script src="assets/js/script/apicall.js"></script>
+    <script src="assets/js/script/index.js"></script>
+    <script src="assets/js/jquery/jquery.slim.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

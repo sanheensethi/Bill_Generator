@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <style>
+      .center{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+    </style>
+    <title>Create Bill</title>
+  </head>
+  <body>
+    
+    <!-- <div id="main">
+      <h1>Dashboard</h1>
+      <button type="submit" class="btn btn-danger" id="logout">LOGOUT</button>
+    </div> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="dashboard.html">Create Bill</a>
+        <a class="nav-link" href="showBills.html">Show Bills</a>
+        <a class="nav-link text-danger" href="javascript:logout()">Logout</a>
+      </div>
+    </div>
+  </div>
+</nav>
+    <div id="main" class="container">
+      <br>
+      <div id="alert">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong id="alertmessage"></strong>
+        <button type="button" style="border:none;outline:none;background-color: transparent;position:absolute;right:15px;margin:auto" data-bs-dismiss="alert" aria-label="Close">X</button>
+      </div>
+      </div>
+      <div class="row align-items-start">
+    <div class="col">
+      Invoice Number:
+      <input type="text" id="invoiceID" class="form-control" style="background-color: transparent;" disabled>
+    </div>
+    <div class="col">
+      Customer Name: <input type="text"  class="form-control" id="customername">
+    </div>
+    <div class="col">
+      Mobile Number: <input type="number" class="form-control" id="mobileNumber">
+    </div>
+    <div class="col">
+      Date : <input type="date"  id="date" class="form-control">
+    </div>
+    <div class="col">
+      Generate Bill <br><input type="submit" id="generate" class="btn btn-primary" value="Generate">
+    </div>
+    <div class="col" id="downloadBill">
+      Download Last Bill <br><input type="submit" id="download" class="btn btn-success" value="Download Last Bill">
+    </div>
+  </div>
+  <br>
+  <div class="row align-items-start">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Item</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price/Item</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Save/Delete</th>
+    </tr>
+  </thead>
+  <tbody id="billBody">
+  </tbody>
+</table>
+  </div>
+
+  <div class="d-grid gap-2 d-md-block">
+  <button class="btn btn-dark" style="font-size:17px;font-weight:bold" type="button" onclick="addChild()" id="addChild">+</button>
+</div>
+<br>
+<br>
+<div class="row align-items-start">
+  <div class="col col-3"></div>
+  <div class="col col-3"></div>
+  <div class="col col-3"></div>
+  <div class="col col-3">
+      <label for="cgst">CGST: </label><input type="number" class="form-control" style="display:inline-block;" id="cgst" disabled>
+  </div>
+</div>
+<div class="row align-items-start">
+  <div class="col col-3"></div>
+  <div class="col col-3"></div>
+  <div class="col col-3"></div>
+  <div class="col col-3">
+      <label for="sgst">SGST: </label><input type="number" class="form-control" style="display:inline-block;" id="sgst" disabled>
+  </div>
+</div>
+<div class="row align-items-start">
+  <div class="col col-3"></div>
+  <div class="col col-3"></div>
+  <div class="col col-3"></div>
+  <div class="col col-3">
+      <label for="total">TOTAL: </label><input type="number" class="form-control" style="display:inline-block;" id="total" disabled>
+  </div>
+</div>
+    <script src="../assets/js/jquery/jquery.slim.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script/apicall.js"></script>
+    <script src="../assets/js/script/dashboardAuth.js"></script>
+    <script src="../assets/js/script/dashboard.js"></script>
+    <script src="../assets/js/script/dashboardBackendCall.js"></script>
+  </body>
+</html>
