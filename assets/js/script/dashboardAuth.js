@@ -1,5 +1,5 @@
 server = `https://shop-billing-software.herokuapp.com`;
-let sev = `${server}`
+sev = `${server}`
 status = localStorage.getItem("LoginStatus");
 function move(){
 	window.location.href='../index.html';

@@ -1,5 +1,5 @@
 server = `https://shop-billing-software.herokuapp.com`;
-let sev = `${server}`
+sev = `${server}`
 
 function getId(id){
 	return document.getElementById(id);

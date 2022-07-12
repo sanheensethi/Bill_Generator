@@ -1,5 +1,5 @@
 server = `https://shop-billing-software.herokuapp.com`;
-let sev = `${server}`
+sev = `${server}`
 const url = `${server}/invoice`; // server address
 const result = apiGET(url);
 // console.log(result);
