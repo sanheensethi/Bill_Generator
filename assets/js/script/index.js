@@ -1,4 +1,4 @@
-const server = `https://shop-billing-software.herokuapp.com`;
+server = `https://shop-billing-software.herokuapp.com`;
 let sev = `${server}`
 function getId(id){
 	return document.getElementById(id);
